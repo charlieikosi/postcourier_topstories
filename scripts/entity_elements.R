@@ -132,7 +132,7 @@ for (link in links) {
 index <- 0
 
 # Create vector of key tourism words
-tourism <- c("Livestock", "farm", "Farming", "Agriculture", "agriculture", "Cocoa", "cocoa",
+agriculture_keys <- c("Livestock", "farm", "Farming", "Agriculture", "agriculture", "Cocoa", "cocoa",
              "Coffee", "coffee", "dairy", "Dairy", "beef", "Beef", "Cattle", "cattle",
              "onion", "garlic", "fresh", "vegetables","Vegetable", "spice", "vanila")
 
@@ -147,7 +147,7 @@ for (link in links) {
   words <- unlist(strsplit(article, " "))
   
   for (word in words) {
-    if (word %in% tourism) {
+    if (word %in% agriculture_keys) {
       print("Match Found!")
       df$Entity.Agriculture.Livestock[index] <- word
     }
