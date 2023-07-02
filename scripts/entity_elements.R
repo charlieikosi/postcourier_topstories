@@ -6,6 +6,8 @@ source("scripts/keyword_vectors.R")
 df <- read.csv("data/db/headlinesdb.csv", stringsAsFactors = FALSE)
 # Vectorize url column
 links <- df$URL
+url_length <- length(links)
+
 
 #---------- Politics Entity --------------------
 # Set looping index
@@ -17,7 +19,7 @@ for (link in links) {
   article <- page %>% html_nodes("p") %>%
     html_text()
   
-  print("accessing link...")
+  print(paste0("accessing link", index, "of", url_length))
   
   words <- unlist(strsplit(article, " "))
   
@@ -40,7 +42,7 @@ for (link in links) {
   article <- page %>% html_nodes("p") %>%
     html_text()
   
-  print("accessing link...")
+  print(paste0("accessing link", index, "of", url_length))
   
   words <- unlist(strsplit(article, " "))
   
@@ -63,7 +65,7 @@ for (link in links) {
   article <- page %>% html_nodes("p") %>%
     html_text()
   
-  print("accessing link...")
+  print(paste0("accessing link", index, "of", url_length))
   
   words <- unlist(strsplit(article, " "))
   
@@ -86,7 +88,7 @@ for (link in links) {
   article <- page %>% html_nodes("p") %>%
     html_text()
   
-  print("accessing link...")
+  print(paste0("accessing link", index, "of", url_length))
   
   words <- unlist(strsplit(article, " "))
   
@@ -109,7 +111,7 @@ for (link in links) {
   article <- page %>% html_nodes("p") %>%
     html_text()
   
-  print("accessing link...")
+  print(paste0("accessing link", index, "of", url_length))
   
   words <- unlist(strsplit(article, " "))
   
@@ -117,6 +119,29 @@ for (link in links) {
     if (word %in% agriculture_keys) {
       print("Match Found!")
       df$Entity.Agriculture.Livestock[index] <- word
+    }
+  }
+}
+
+#---------- Extractive Entity --------------------
+
+# Set looping index
+index <- 0
+
+for (link in links) {
+  index <- index + 1
+  page <- read_html(link)
+  article <- page %>% html_nodes("p") %>%
+    html_text()
+  
+  print(paste0("accessing link", index, "of", url_length))
+  
+  words <- unlist(strsplit(article, " "))
+  
+  for (word in words) {
+    if (word %in% industry) {
+      print("Match Found!")
+      df$Entity.Extractive.Industry[index] <- word
     }
   }
 }

@@ -31,7 +31,32 @@ tourism <- c("Tourist", "Tourism", "tourist", "tourists", "Tourists", "tourism",
              "Resort")
 
 #------------------------------------------------
-# Create vector of key tourism words
+# Create vector of key agriculture words
 agriculture_keys <- c("Livestock", "farm", "Farming", "Agriculture", "agriculture", "Cocoa", "cocoa",
                       "Coffee", "coffee", "dairy", "Dairy", "beef", "Beef", "Cattle", "cattle",
                       "onion", "garlic", "fresh", "vegetables","Vegetable", "spice", "vanila")
+
+#------------------------------------------------
+# Create vector for key extractive industries words
+
+industry <- c("Mine", "Mining", "mine", "mining", "Petroleum", "petroleum", "Oil Search",
+              "oil search", "Newcrest", "gas", "oil", "exploration", "tenement", "MMJV", "OTML",
+              "otml", "copper", "Copper", "Gold", "gold", "Exploration", "Frieda", "mines", "Mines",
+              "Total", "Exxon", "Mobil")
+
+#------------------------------------------------
+# Create vector f key extractive industries
+
+
+
+
+
+
+
+
+
+
+
+
+
+

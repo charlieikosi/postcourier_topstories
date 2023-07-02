@@ -1,4 +1,4 @@
-source("postcourierR/postcourierR.R")
+source("scripts/postcourierR/postcourierR.R")
 
 # Url for page to scrape
 pc_url <- "https://www.postcourier.com.pg/top-stories/"
