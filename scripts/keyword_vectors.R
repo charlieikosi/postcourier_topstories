@@ -39,10 +39,10 @@ agriculture_keys <- c("Livestock", "farm", "Farming", "Agriculture", "agricultur
 #------------------------------------------------
 # Create vector for key extractive industries words
 
-industry <- c("Mine", "Mining", "mine", "mining", "Petroleum", "petroleum", "Oil Search",
-              "oil search", "Newcrest", "gas", "oil", "exploration", "tenement", "MMJV", "OTML",
+industry <- c("Mine", "Mining", "mine", "mining", "Petroleum", "petroleum", "Oil",
+              "oil", "Newcrest", "gas", "oil", "exploration", "tenement", "MMJV", "OTML",
               "otml", "copper", "Copper", "Gold", "gold", "Exploration", "Frieda", "mines", "Mines",
-              "Total", "Exxon", "Mobil")
+              "Exxon", "Mobil", "Golpu")
 
 #------------------------------------------------
 # Create vector f key extractive industries

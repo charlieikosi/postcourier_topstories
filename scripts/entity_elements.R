@@ -95,7 +95,7 @@ for (link in links) {
   for (word in words) {
     if (word %in% tourism) {
       print("Match Found!")
-      df$Entity.Tourism[index] <- "Tourism"
+      df$Entity.Tourism[index] <- word
     }
   }
 }
@@ -123,7 +123,7 @@ for (link in links) {
   }
 }
 
-#---------- Extractive Entity --------------------
+#---------- Extractive Entity -------------------- (done)
 
 # Set looping index
 index <- 0
