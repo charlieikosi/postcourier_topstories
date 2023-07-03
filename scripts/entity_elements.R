@@ -134,7 +134,7 @@ for (link in links) {
   article <- page %>% html_nodes("p") %>%
     html_text()
   
-  print(paste0("accessing link", index, "of", url_length))
+  print(paste0("accessing link ", index, " of ", url_length))
   
   words <- unlist(strsplit(article, " "))
   
